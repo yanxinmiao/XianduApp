@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        // FIXME
+        maven { url 'http://depot.sankuai.com/nexus/content/groups/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.1.0'
+        classpath 'com.meituan.android.walle:plugin:1.0.0'
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+        //pury
+        classpath 'com.nikitakozlov:weaverlite:1.0.0'
+        //Bugly插件具有符号表文件上传功能
+//        classpath 'com.tencent.bugly:symtabfileuploader:latest.release'
+//        // tinker gradle插件
+//        classpath ('com.tencent.tinker:tinker-patch-gradle-plugin:1.7.5')
+//        // tinkersupport插件
+//        classpath "com.tencent.bugly:tinker-support:latest.release"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
